@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body onload="render()">
+    <header class="header">
+        <h1 class="header__title">Todo App</h1>
+    </header>
+    <main class="main">
+        <section class="todo-input">
+            <input class="todo-input__input" id="todo-input" type="text" placeholder="Get sh*t done!" />
+            <button class="todo-input__button button" id="add-button">Add</button>
+        </section>
+
+        <section class="filter-and-options">
+            <h2>Filter & Options</h2>
+            <div class="radio-container" id="radio-container">
+                <input type="radio" name="filter" id="radio-all" value="all" class="radio-button" checked />
+                <label for="radio-all">All</label>
+                <input type="radio" name="filter" id="radio-open" value="open" class="radio-button" />
+                <label for="radio-open">Open</label>
+                <input type="radio" name="filter" id="radio-done" value="done" class="radio-button" />
+                <label for="radio-done">Done</label>
+            </div>
+            <button class="button" id="delete-button">Remove Done Todos</button>
+        </section>
+
+        <section class="todos">
+            <h2>Your Todos</h2>
+            <ul id="todo-list" class="todo-list"></ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
